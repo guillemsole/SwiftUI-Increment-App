@@ -17,6 +17,8 @@ class CreateChallengeViewModel: ObservableObject {
     @Published var increaseDropdown = ChallengePartViewModel(type: .increase)
     @Published var lengthDropdown = ChallengePartViewModel(type: .length)
     
+    @Published var error: IncrementError?
+    @Published var isLoading = false
     
     private let userService: UserServiceProtocol
     private let challengeService: ChallengeServiceProtocol
@@ -34,13 +36,15 @@ class CreateChallengeViewModel: ObservableObject {
     func send(action: Action) {
         switch action {
         case .createChallenge:
-            currentUserId().flatMap { userId -> AnyPublisher<Void, Error> in
+            self.isLoading = true
+            currentUserId().flatMap { userId -> AnyPublisher<Void, IncrementError> in
                 return self.createChallenge(userId: userId)
             }
             .sink { completion in
+                self.isLoading = false
                 switch completion {
                 case let .failure(error):
-                    print(error.localizedDescription)
+                    self.error = error
                 case .finished:
                     print("finished")
                 }
@@ -52,12 +56,12 @@ class CreateChallengeViewModel: ObservableObject {
 
     }
     
-    private func createChallenge(userId: UserId) -> AnyPublisher<Void, Error> {
+    private func createChallenge(userId: UserId) -> AnyPublisher<Void, IncrementError> {
         guard let exercise = exerciseDropdown.text,
               let startAmount = startAmountDropdown.number,
               let increase = increaseDropdown.number,
               let length = lengthDropdown.number else {
-            return Fail(error: NSError()).eraseToAnyPublisher()
+            return Fail(error: .default(description: "Parsing error")).eraseToAnyPublisher()
         }
         
         let challenge = Challenge(
@@ -72,13 +76,13 @@ class CreateChallengeViewModel: ObservableObject {
         return challengeService.create(challenge).eraseToAnyPublisher()
     }
 
-    private func currentUserId() -> AnyPublisher<UserId, Error> {
+    private func currentUserId() -> AnyPublisher<UserId, IncrementError> {
         print("getting user id")
-        return userService.currentUser().flatMap { user -> AnyPublisher<UserId, Error> in
+        return userService.currentUser().flatMap { user -> AnyPublisher<UserId, IncrementError> in
             if let userId = user?.uid {
                 print("user is logged in...")
                 return Just(userId)
-                    .setFailureType(to: Error.self)
+                    .setFailureType(to: IncrementError.self)
                     .eraseToAnyPublisher()
             } else {
                 print("user is being logged in annonmously...")
