@@ -11,12 +11,6 @@ import Combine
 typealias UserId = String
 
 class CreateChallengeViewModel: ObservableObject {
-//    @Published var dropdowns: [ChallengePartViewModel] = [
-//        .init(type: .exercise),
-//        .init(type: .startAmount),
-//        .init(type: .increase),
-//        .init(type: .length)
-//    ]
     
     @Published var exerciseDropdown = ChallengePartViewModel(type: .exercise)
     @Published var startAmountDropdown = ChallengePartViewModel(type: .startAmount)
@@ -25,33 +19,59 @@ class CreateChallengeViewModel: ObservableObject {
     
     
     private let userService: UserServiceProtocol
+    private let challengeService: ChallengeServiceProtocol
     private var cancellables: [AnyCancellable] = []
     enum Action {
         case createChallenge
     }
     
-    init(userService: UserServiceProtocol = UserService()) {
+    init(userService: UserServiceProtocol = UserService(),
+         challengeService: ChallengeServiceProtocol = ChallengeService()) {
         self.userService = userService
+        self.challengeService = challengeService
     }
     
     func send(action: Action) {
         switch action {
         case .createChallenge:
-            currentUserId().sink { completion in
+            currentUserId().flatMap { userId -> AnyPublisher<Void, Error> in
+                return self.createChallenge(userId: userId)
+            }
+            .sink { completion in
                 switch completion {
                 case let .failure(error):
-                        print(error.localizedDescription)
+                    print(error.localizedDescription)
                 case .finished:
-                    print("completed")
+                    print("finished")
                 }
-                
-            } receiveValue: { userId in
-                print("retrived userId = \(userId)")
+
+            } receiveValue: { _ in
+                print("success")
             }.store(in: &cancellables)
         }
 
     }
     
+    private func createChallenge(userId: UserId) -> AnyPublisher<Void, Error> {
+        guard let exercise = exerciseDropdown.text,
+              let startAmount = startAmountDropdown.number,
+              let increase = increaseDropdown.number,
+              let length = lengthDropdown.number else {
+            return Fail(error: NSError()).eraseToAnyPublisher()
+        }
+        
+        let challenge = Challenge(
+            exercise: exercise,
+            startAmount: startAmount,
+            increase: increase,
+            length: length,
+            userId: userId,
+            startDate: Date()
+        )
+        
+        return challengeService.create(challenge).eraseToAnyPublisher()
+    }
+
     private func currentUserId() -> AnyPublisher<UserId, Error> {
         print("getting user id")
         return userService.currentUser().flatMap { user -> AnyPublisher<UserId, Error> in
@@ -144,5 +164,21 @@ extension CreateChallengeViewModel {
                 .init(type: .number(rawValue), formatted: "\(rawValue) days")
             }
         }
+    }
+}
+
+extension CreateChallengeViewModel.ChallengePartViewModel {
+    var text: String? {
+        if case let .text(text) = selectedOption.type {
+            return text
+        }
+        return nil
+    }
+    
+    var number: Int? {
+        if case let .number(number) = selectedOption.type {
+            return number
+        }
+        return nil
     }
 }
