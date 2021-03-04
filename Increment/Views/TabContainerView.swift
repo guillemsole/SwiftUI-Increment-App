@@ -23,8 +23,6 @@ struct TabContainerView: View {
     @ViewBuilder
     func tabView(for tabItemType: TabItemViewModel.TabItemType) -> some View {
         switch tabItemType {
-        case .log:
-            Text("Log")
         case .challengeList:
             NavigationView {
                 ChallengeListView()
@@ -40,8 +38,7 @@ struct TabContainerView: View {
 final class TabContainerViewModel: ObservableObject {
     @Published var selectedTab: TabItemViewModel.TabItemType = .challengeList
 
-    let tabItemViewModels = [
-        TabItemViewModel(imageName: "book", title: "Activity Log", type: .log),
+    let tabItemViewModels: [TabItemViewModel] = [
         .init(imageName: "list.bullet", title: "Challenges", type: .challengeList),
         .init(imageName: "gear", title: "Settings", type: .settings)
     ]
@@ -53,7 +50,6 @@ struct TabItemViewModel: Hashable {
     let type: TabItemType
     
     enum TabItemType {
-        case log
         case challengeList
         case settings
     }
