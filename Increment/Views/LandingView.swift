@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct LandingView: View {
-    @State private var isActive: Bool = false
+    @StateObject private var viewModel = LandingViewModel()
     var body: some View {
         NavigationView {
             GeometryReader { proxy in
@@ -18,9 +18,9 @@ struct LandingView: View {
                         .font(.system(size: 64, weight: .medium))
                         .foregroundColor(.white)
                     Spacer()
-                    NavigationLink(destination: CreateView(), isActive: $isActive) {
+                    NavigationLink(destination: CreateView(), isActive: $viewModel.createPush) {
                         Button(action: {
-                            isActive = true
+                            viewModel.createPush = true
                         }) {
                             HStack(spacing: 15.0) {
                                 Spacer()
@@ -34,7 +34,12 @@ struct LandingView: View {
                         .padding(15.0)
                         .buttonStyle(PrimaryButtonStyle())
                     }
-                }.frame(
+                    Button("I already have an account") {
+                        viewModel.loginSignupPushed = true
+                    }.foregroundColor(.white)
+                }
+                .padding(.bottom, 15)
+                .frame(
                     maxWidth: .infinity,
                     maxHeight: .infinity
                 )

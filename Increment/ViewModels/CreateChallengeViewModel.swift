@@ -18,7 +18,7 @@ class CreateChallengeViewModel: ObservableObject {
     @Published var lengthDropdown = ChallengePartViewModel(type: .length)
     
     @Published var error: IncrementError?
-    @Published var isLoading = false
+    @Published private(set) var isLoading = false
     
     private let userService: UserServiceProtocol
     private let challengeService: ChallengeServiceProtocol
