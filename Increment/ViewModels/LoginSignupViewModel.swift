@@ -6,23 +6,22 @@
 //
 
 import Combine
-import SwiftUI
+import Foundation
 
 final class LoginSignupViewModel: ObservableObject {
     private let mode: Mode
     @Published var emailText = ""
     @Published var passwordText = ""
     @Published var isValid = false
-    @Binding var isPushed: Bool
+    @Published var isPushed = true
     private(set) var emailPlaceholderText = "Email"
     private(set) var passwordPlaceholderText = "Password"
     private let userService: UserServiceProtocol
     private var cancellables: [AnyCancellable] = []
 
-    init(mode: Mode, userService: UserServiceProtocol = UserService(), isPushed: Binding<Bool>) {
+    init(mode: Mode, userService: UserServiceProtocol = UserService()) {
         self.mode = mode
         self.userService = userService
-        self._isPushed = isPushed
         
         Publishers.CombineLatest($emailText, $passwordText)
             .map { [weak self] email, password in
