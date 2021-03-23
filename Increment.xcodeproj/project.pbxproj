@@ -3,25 +3,70 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		630EC3AC25EE5FD60000FEF4 /* CreateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630EC3AB25EE5FD60000FEF4 /* CreateView.swift */; };
 		630EC3AF25EE60370000FEF4 /* DropdownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630EC3AE25EE60370000FEF4 /* DropdownView.swift */; };
 		630EC3B325EE65190000FEF4 /* RemindView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630EC3B225EE65190000FEF4 /* RemindView.swift */; };
+		630EC3B725EE66D80000FEF4 /* CreateChallengeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630EC3B625EE66D80000FEF4 /* CreateChallengeViewModel.swift */; };
+		630EC3BA25EE67D00000FEF4 /* DropdownItemProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630EC3B925EE67D00000FEF4 /* DropdownItemProtocol.swift */; };
+		630EC3BD25EE81CB0000FEF4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 630EC3BC25EE81CB0000FEF4 /* GoogleService-Info.plist */; };
+		630EC3D825EE87C50000FEF4 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630EC3D725EE87C50000FEF4 /* UserService.swift */; };
+		630EC3F125EF78E20000FEF4 /* Challenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630EC3F025EF78E20000FEF4 /* Challenge.swift */; };
+		630EC3F425EF79890000FEF4 /* ChallengeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630EC3F325EF79890000FEF4 /* ChallengeService.swift */; };
+		630EC3F725EF84ED0000FEF4 /* IncrementError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630EC3F625EF84ED0000FEF4 /* IncrementError.swift */; };
+		630EC3FB25EF8A0C0000FEF4 /* AuthPublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630EC3FA25EF8A0C0000FEF4 /* AuthPublisher.swift */; };
+		630EC3FF25EF9E5D0000FEF4 /* TabContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630EC3FE25EF9E5D0000FEF4 /* TabContainerView.swift */; };
+		630EC40225EFA1890000FEF4 /* ChallengeListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630EC40125EFA1890000FEF4 /* ChallengeListView.swift */; };
+		630EC40525EFA1970000FEF4 /* ChallengeListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630EC40425EFA1970000FEF4 /* ChallengeListViewModel.swift */; };
+		630EC40825EFA2210000FEF4 /* QuerySnapshotPublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630EC40725EFA2210000FEF4 /* QuerySnapshotPublisher.swift */; };
+		630EC40B25EFE5870000FEF4 /* ChallengeItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630EC40A25EFE5860000FEF4 /* ChallengeItemViewModel.swift */; };
+		630EC41525F0CAE50000FEF4 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630EC41425F0CAE50000FEF4 /* SettingsView.swift */; };
+		630EC41925F0CB000000FEF4 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630EC41825F0CB000000FEF4 /* SettingsViewModel.swift */; };
+		630EC41C25F0CB0E0000FEF4 /* SettingsItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630EC41B25F0CB0E0000FEF4 /* SettingsItemViewModel.swift */; };
+		630EC43625F0D6240000FEF4 /* LandingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630EC43525F0D6240000FEF4 /* LandingViewModel.swift */; };
+		630EC43925F0DA380000FEF4 /* LoginSignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630EC43825F0DA380000FEF4 /* LoginSignupView.swift */; };
+		630EC43C25F0DA7C0000FEF4 /* LoginSignupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630EC43B25F0DA7C0000FEF4 /* LoginSignupViewModel.swift */; };
 		6324310325EE50EF005777D3 /* IncrementApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6324310225EE50EF005777D3 /* IncrementApp.swift */; };
 		6324310525EE50EF005777D3 /* LandingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6324310425EE50EF005777D3 /* LandingView.swift */; };
 		6324310725EE50F5005777D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6324310625EE50F5005777D3 /* Assets.xcassets */; };
 		6324310A25EE50F5005777D3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6324310925EE50F5005777D3 /* Preview Assets.xcassets */; };
 		6324311425EE5798005777D3 /* PrimaryButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6324311325EE5798005777D3 /* PrimaryButtonStyle.swift */; };
 		6324311725EE5864005777D3 /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6324311625EE5864005777D3 /* Color+Extension.swift */; };
+		63E6FC9425F0DF6B0057756B /* TextFieldCustomRoundedStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E6FC9325F0DF6B0057756B /* TextFieldCustomRoundedStyle.swift */; };
+		63E6FC9725F0FCBC0057756B /* ProgressCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E6FC9625F0FCBC0057756B /* ProgressCircleView.swift */; };
+		63E6FC9A25F0FD700057756B /* ProgressCircleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E6FC9925F0FD700057756B /* ProgressCircleViewModel.swift */; };
+		63E6FC9F25F103D50057756B /* ChallengeItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E6FC9E25F103D50057756B /* ChallengeItemView.swift */; };
+		EC4BCE08313E5B27A04F7AF5 /* Pods_Increment.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCB0E70998DC3FA2BEAAE0A7 /* Pods_Increment.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1487A2B7F1AF9633DA42A567 /* Pods-Increment.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Increment.debug.xcconfig"; path = "Target Support Files/Pods-Increment/Pods-Increment.debug.xcconfig"; sourceTree = "<group>"; };
+		1912D26E35ADDD74BE63FD03 /* Pods-Increment.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Increment.release.xcconfig"; path = "Target Support Files/Pods-Increment/Pods-Increment.release.xcconfig"; sourceTree = "<group>"; };
 		630EC3AB25EE5FD60000FEF4 /* CreateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateView.swift; sourceTree = "<group>"; };
 		630EC3AE25EE60370000FEF4 /* DropdownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropdownView.swift; sourceTree = "<group>"; };
 		630EC3B225EE65190000FEF4 /* RemindView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemindView.swift; sourceTree = "<group>"; };
+		630EC3B625EE66D80000FEF4 /* CreateChallengeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateChallengeViewModel.swift; sourceTree = "<group>"; };
+		630EC3B925EE67D00000FEF4 /* DropdownItemProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropdownItemProtocol.swift; sourceTree = "<group>"; };
+		630EC3BC25EE81CB0000FEF4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		630EC3D725EE87C50000FEF4 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		630EC3F025EF78E20000FEF4 /* Challenge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Challenge.swift; sourceTree = "<group>"; };
+		630EC3F325EF79890000FEF4 /* ChallengeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeService.swift; sourceTree = "<group>"; };
+		630EC3F625EF84ED0000FEF4 /* IncrementError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncrementError.swift; sourceTree = "<group>"; };
+		630EC3FA25EF8A0C0000FEF4 /* AuthPublisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthPublisher.swift; sourceTree = "<group>"; };
+		630EC3FE25EF9E5D0000FEF4 /* TabContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabContainerView.swift; sourceTree = "<group>"; };
+		630EC40125EFA1890000FEF4 /* ChallengeListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeListView.swift; sourceTree = "<group>"; };
+		630EC40425EFA1970000FEF4 /* ChallengeListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeListViewModel.swift; sourceTree = "<group>"; };
+		630EC40725EFA2210000FEF4 /* QuerySnapshotPublisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuerySnapshotPublisher.swift; sourceTree = "<group>"; };
+		630EC40A25EFE5860000FEF4 /* ChallengeItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ChallengeItemViewModel.swift; path = Increment/ChallengeItemViewModel.swift; sourceTree = SOURCE_ROOT; };
+		630EC41425F0CAE50000FEF4 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		630EC41825F0CB000000FEF4 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
+		630EC41B25F0CB0E0000FEF4 /* SettingsItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsItemViewModel.swift; sourceTree = "<group>"; };
+		630EC43525F0D6240000FEF4 /* LandingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingViewModel.swift; sourceTree = "<group>"; };
+		630EC43825F0DA380000FEF4 /* LoginSignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginSignupView.swift; sourceTree = "<group>"; };
+		630EC43B25F0DA7C0000FEF4 /* LoginSignupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginSignupViewModel.swift; sourceTree = "<group>"; };
 		632430FF25EE50EF005777D3 /* Increment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Increment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6324310225EE50EF005777D3 /* IncrementApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncrementApp.swift; sourceTree = "<group>"; };
 		6324310425EE50EF005777D3 /* LandingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingView.swift; sourceTree = "<group>"; };
@@ -30,6 +75,11 @@
 		6324310B25EE50F5005777D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6324311325EE5798005777D3 /* PrimaryButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButtonStyle.swift; sourceTree = "<group>"; };
 		6324311625EE5864005777D3 /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
+		63E6FC9325F0DF6B0057756B /* TextFieldCustomRoundedStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldCustomRoundedStyle.swift; sourceTree = "<group>"; };
+		63E6FC9625F0FCBC0057756B /* ProgressCircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressCircleView.swift; sourceTree = "<group>"; };
+		63E6FC9925F0FD700057756B /* ProgressCircleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressCircleViewModel.swift; sourceTree = "<group>"; };
+		63E6FC9E25F103D50057756B /* ChallengeItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeItemView.swift; sourceTree = "<group>"; };
+		CCB0E70998DC3FA2BEAAE0A7 /* Pods_Increment.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Increment.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,17 +87,113 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC4BCE08313E5B27A04F7AF5 /* Pods_Increment.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		14D2946FC5583B73ABE51BB5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CCB0E70998DC3FA2BEAAE0A7 /* Pods_Increment.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		37E8A69FCEC35A297FC4DCA3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1487A2B7F1AF9633DA42A567 /* Pods-Increment.debug.xcconfig */,
+				1912D26E35ADDD74BE63FD03 /* Pods-Increment.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		630EC3B525EE66BE0000FEF4 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				630EC3B625EE66D80000FEF4 /* CreateChallengeViewModel.swift */,
+				630EC3B925EE67D00000FEF4 /* DropdownItemProtocol.swift */,
+				630EC40425EFA1970000FEF4 /* ChallengeListViewModel.swift */,
+				630EC40A25EFE5860000FEF4 /* ChallengeItemViewModel.swift */,
+				630EC41825F0CB000000FEF4 /* SettingsViewModel.swift */,
+				630EC41B25F0CB0E0000FEF4 /* SettingsItemViewModel.swift */,
+				630EC43525F0D6240000FEF4 /* LandingViewModel.swift */,
+				630EC43B25F0DA7C0000FEF4 /* LoginSignupViewModel.swift */,
+				63E6FC9925F0FD700057756B /* ProgressCircleViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		630EC3D625EE87AD0000FEF4 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				630EC3D725EE87C50000FEF4 /* UserService.swift */,
+				630EC3F325EF79890000FEF4 /* ChallengeService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		630EC3EF25EF78D50000FEF4 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				630EC3F025EF78E20000FEF4 /* Challenge.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		630EC3F925EF89F30000FEF4 /* Publishers */ = {
+			isa = PBXGroup;
+			children = (
+				630EC3FA25EF8A0C0000FEF4 /* AuthPublisher.swift */,
+				630EC40725EFA2210000FEF4 /* QuerySnapshotPublisher.swift */,
+			);
+			path = Publishers;
+			sourceTree = "<group>";
+		};
+		630EC40D25F0CA4C0000FEF4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				6324311325EE5798005777D3 /* PrimaryButtonStyle.swift */,
+				630EC43825F0DA380000FEF4 /* LoginSignupView.swift */,
+				6324310425EE50EF005777D3 /* LandingView.swift */,
+				630EC3AB25EE5FD60000FEF4 /* CreateView.swift */,
+				630EC3B225EE65190000FEF4 /* RemindView.swift */,
+				630EC3AE25EE60370000FEF4 /* DropdownView.swift */,
+				630EC3FE25EF9E5D0000FEF4 /* TabContainerView.swift */,
+				630EC40125EFA1890000FEF4 /* ChallengeListView.swift */,
+				63E6FC9E25F103D50057756B /* ChallengeItemView.swift */,
+				630EC41425F0CAE50000FEF4 /* SettingsView.swift */,
+				63E6FC9625F0FCBC0057756B /* ProgressCircleView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		630EC41025F0CA640000FEF4 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				6324311625EE5864005777D3 /* Color+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		630EC41325F0CA8C0000FEF4 /* Errors */ = {
+			isa = PBXGroup;
+			children = (
+				630EC3F625EF84ED0000FEF4 /* IncrementError.swift */,
+			);
+			path = Errors;
+			sourceTree = "<group>";
+		};
 		632430F625EE50EE005777D3 = {
 			isa = PBXGroup;
 			children = (
 				6324310125EE50EF005777D3 /* Increment */,
 				6324310025EE50EF005777D3 /* Products */,
+				37E8A69FCEC35A297FC4DCA3 /* Pods */,
+				14D2946FC5583B73ABE51BB5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -62,16 +208,19 @@
 		6324310125EE50EF005777D3 /* Increment */ = {
 			isa = PBXGroup;
 			children = (
+				63E6FC9225F0DF4A0057756B /* Modifiers */,
+				630EC41325F0CA8C0000FEF4 /* Errors */,
+				630EC41025F0CA640000FEF4 /* Extensions */,
+				630EC40D25F0CA4C0000FEF4 /* Views */,
+				630EC3F925EF89F30000FEF4 /* Publishers */,
+				630EC3EF25EF78D50000FEF4 /* Models */,
+				630EC3BC25EE81CB0000FEF4 /* GoogleService-Info.plist */,
+				630EC3D625EE87AD0000FEF4 /* Services */,
+				630EC3B525EE66BE0000FEF4 /* ViewModels */,
 				6324310225EE50EF005777D3 /* IncrementApp.swift */,
-				6324310425EE50EF005777D3 /* LandingView.swift */,
-				630EC3AB25EE5FD60000FEF4 /* CreateView.swift */,
-				630EC3B225EE65190000FEF4 /* RemindView.swift */,
 				6324310625EE50F5005777D3 /* Assets.xcassets */,
 				6324310B25EE50F5005777D3 /* Info.plist */,
 				6324310825EE50F5005777D3 /* Preview Content */,
-				6324311325EE5798005777D3 /* PrimaryButtonStyle.swift */,
-				6324311625EE5864005777D3 /* Color+Extension.swift */,
-				630EC3AE25EE60370000FEF4 /* DropdownView.swift */,
 			);
 			path = Increment;
 			sourceTree = "<group>";
@@ -84,6 +233,14 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		63E6FC9225F0DF4A0057756B /* Modifiers */ = {
+			isa = PBXGroup;
+			children = (
+				63E6FC9325F0DF6B0057756B /* TextFieldCustomRoundedStyle.swift */,
+			);
+			path = Modifiers;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -91,9 +248,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6324310E25EE50F5005777D3 /* Build configuration list for PBXNativeTarget "Increment" */;
 			buildPhases = (
+				162E8C4F661FAE4B94B7AA9A /* [CP] Check Pods Manifest.lock */,
 				632430FB25EE50EF005777D3 /* Sources */,
 				632430FC25EE50EF005777D3 /* Frameworks */,
 				632430FD25EE50EF005777D3 /* Resources */,
+				4820EC5B9BF59922EAE99330 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -143,23 +302,88 @@
 			files = (
 				6324310A25EE50F5005777D3 /* Preview Assets.xcassets in Resources */,
 				6324310725EE50F5005777D3 /* Assets.xcassets in Resources */,
+				630EC3BD25EE81CB0000FEF4 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		162E8C4F661FAE4B94B7AA9A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Increment-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4820EC5B9BF59922EAE99330 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Increment/Pods-Increment-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Increment/Pods-Increment-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Increment/Pods-Increment-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		632430FB25EE50EF005777D3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				630EC3FB25EF8A0C0000FEF4 /* AuthPublisher.swift in Sources */,
 				6324311425EE5798005777D3 /* PrimaryButtonStyle.swift in Sources */,
 				6324310525EE50EF005777D3 /* LandingView.swift in Sources */,
 				6324310325EE50EF005777D3 /* IncrementApp.swift in Sources */,
+				630EC3BA25EE67D00000FEF4 /* DropdownItemProtocol.swift in Sources */,
+				630EC41525F0CAE50000FEF4 /* SettingsView.swift in Sources */,
+				630EC41C25F0CB0E0000FEF4 /* SettingsItemViewModel.swift in Sources */,
+				630EC43C25F0DA7C0000FEF4 /* LoginSignupViewModel.swift in Sources */,
+				630EC3F125EF78E20000FEF4 /* Challenge.swift in Sources */,
 				6324311725EE5864005777D3 /* Color+Extension.swift in Sources */,
+				63E6FC9F25F103D50057756B /* ChallengeItemView.swift in Sources */,
+				630EC3B725EE66D80000FEF4 /* CreateChallengeViewModel.swift in Sources */,
+				630EC3D825EE87C50000FEF4 /* UserService.swift in Sources */,
+				630EC3FF25EF9E5D0000FEF4 /* TabContainerView.swift in Sources */,
+				630EC43625F0D6240000FEF4 /* LandingViewModel.swift in Sources */,
+				630EC40525EFA1970000FEF4 /* ChallengeListViewModel.swift in Sources */,
+				630EC40825EFA2210000FEF4 /* QuerySnapshotPublisher.swift in Sources */,
 				630EC3B325EE65190000FEF4 /* RemindView.swift in Sources */,
+				630EC3F425EF79890000FEF4 /* ChallengeService.swift in Sources */,
+				630EC40B25EFE5870000FEF4 /* ChallengeItemViewModel.swift in Sources */,
+				630EC43925F0DA380000FEF4 /* LoginSignupView.swift in Sources */,
+				630EC40225EFA1890000FEF4 /* ChallengeListView.swift in Sources */,
 				630EC3AC25EE5FD60000FEF4 /* CreateView.swift in Sources */,
+				63E6FC9725F0FCBC0057756B /* ProgressCircleView.swift in Sources */,
+				63E6FC9A25F0FD700057756B /* ProgressCircleViewModel.swift in Sources */,
+				63E6FC9425F0DF6B0057756B /* TextFieldCustomRoundedStyle.swift in Sources */,
 				630EC3AF25EE60370000FEF4 /* DropdownView.swift in Sources */,
+				630EC3F725EF84ED0000FEF4 /* IncrementError.swift in Sources */,
+				630EC41925F0CB000000FEF4 /* SettingsViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -217,7 +441,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -272,7 +496,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -284,6 +508,7 @@
 		};
 		6324310F25EE50F5005777D3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1487A2B7F1AF9633DA42A567 /* Pods-Increment.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -291,6 +516,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Increment/Preview Content\"";
 				DEVELOPMENT_TEAM = 99FBQG9WNS;
 				ENABLE_PREVIEWS = YES;
+				EXCLUDED_ARCHS = "";
 				INFOPLIST_FILE = Increment/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -306,6 +532,7 @@
 		};
 		6324311025EE50F5005777D3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1912D26E35ADDD74BE63FD03 /* Pods-Increment.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

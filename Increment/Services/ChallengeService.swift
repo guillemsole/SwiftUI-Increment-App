@@ -39,7 +39,7 @@ final class ChallengeService: ChallengeServiceProtocol {
         return Publishers.QuerySnapshotPublisher(query: query).flatMap { snapshot -> AnyPublisher<[Challenge], IncrementError> in
             do {
                 let challenges = try snapshot.documents.compactMap {
-                    try $0.data(as: Challenge.self)
+                     try $0.data(as: Challenge.self)
                 }
                 return Just(challenges).setFailureType(to: IncrementError.self).eraseToAnyPublisher()
             } catch {
